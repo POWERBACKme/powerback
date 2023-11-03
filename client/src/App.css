@@ -1,0 +1,197 @@
+/* * {
+  border: 1px solid red !important;
+} */
+
+html {
+  height: 100%;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+  overflow-anchor: none !important;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Oswald', 'Inconsolata', 'Century Gothic' !important;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+.list-group-item {
+  color: #ccc;
+}
+.App {
+  min-height: 100vh;
+  min-width: 100%;
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+/* brand style */
+.powerback {
+  color: #fc9 !important;
+  font-family: 'Oswald';
+  max-width: 10vw;
+}
+.donation-politics {
+  letter-spacing: -0.5px;
+}
+.iconic-pink {
+  color: #ec8ec8 !important;
+}
+.valid-feedback,
+.invalid-feedback {
+  text-align: center;
+  font-size: small;
+  font-family: 'system-ui', '-apple-system';
+}
+.form-check-input {
+  background-color: #ccc;
+  box-shadow: inset 0 0 5px #cf9;
+}
+.form-control {
+  color: #0f0 !important;
+}
+label {
+  font-family: 'Inconsolata' !important;
+  color: #ccc;
+}
+.inter {
+  font-family: 'Inter' !important;
+}
+.inconsolata {
+  font-family: 'Inconsolata' !important;
+}
+.form-control.is-valid,
+.was-validated .form-control:valid {
+  border-color: #fc9;
+}
+input.form-check-input:checked {
+  background-color: #f9c !important;
+  border: 1px solid #fc9 !important;
+}
+.input-group-text {
+  color: #ccc;
+  background-color: #99cc9927;
+  border: 2px solid #3c3c3b;
+}
+span.nav-link {
+  cursor: pointer !important;
+}
+/* #test-mode {
+  display: none;
+  position: fixed;
+  color: white;
+  bottom: 0 !important;
+  font-size: small;
+  text-align: center !important;
+  background-color: #db5400;
+  width: 100%;
+  z-index: 10000;
+} */
+
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  .App {
+    background: #171b1e url('./img/bg/414x915.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 2vh calc(-28vw + 23vh);
+
+    /* background: -moz-linear-gradient(
+      90deg,
+      rgba(23, 27, 30, 1) 0%,
+      rgba(27, 27, 27, 1) 10%,
+      rgba(27, 27, 27, 1) 79%,
+      rgba(31, 27, 24, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      90deg,
+      rgba(23, 27, 30, 1) 0%,
+      rgba(27, 27, 27, 1) 10%,
+      rgba(27, 27, 27, 1) 79%,
+      rgba(31, 27, 24, 1) 100%
+    );
+    background: linear-gradient(
+      90deg,
+      rgba(23, 27, 30, 1) 0%,
+      rgba(27, 27, 27, 1) 10%,
+      rgba(27, 27, 27, 1) 79%,
+      rgba(31, 27, 24, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171b1e",endColorstr="#1f1b18",GradientType=1);
+    background-size: 412px; */
+    text-align: center;
+  }
+  .form-group.input-group.has-validation {
+    height: 40px;
+  }
+}
+/* Mobile, landscape */
+@media only screen and (min-width: 600px) and (orientation: landscape) {
+  .App {
+    background: rgb(23, 27, 30) url('./img/bg/1920x1280.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 0px -84px;
+    text-align: center;
+  }
+}
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  .App {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #1b1b1b url('./img/bg/1920x1280.webp');
+    /* non-dark mode background-color: #eae6ea  */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 1px 0px;
+    text-align: center;
+  }
+  .form-group.input-group.has-validation {
+    max-height: 40px;
+  }
+}
+/* Desktop */
+@media only screen and (min-width: 1200px) {
+  html {
+    overflow: hidden;
+  }
+  .App {
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+}
+/* Big Screen */
+@media only screen and (min-width: 2000px) and (orientation: landscape) {
+  .App {
+    background: #1b1b1b url('./img/bg/2560x1440.webp');
+    /* non-dark mode background-color: #eae6ea  */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 0px 100px;
+    text-align: center;
+  }
+}

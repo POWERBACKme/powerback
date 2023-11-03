@@ -1,0 +1,68 @@
+#account-modal .profile-form-ask > p,
+p.reminder {
+  text-align: center;
+  font-family: 'Inconsolata';
+  line-height: 1.5rem;
+}
+#account-modal .profile-form-ask > p {
+  color: #adebcb;
+}
+p.reminder {
+  color: #f9c !important;
+}
+.dollar-limit {
+  color: #9fc;
+  font-family: 'Red Hat Text';
+}
+.profile-form-ask {
+  text-align: center;
+}
+.compliance {
+  background-color: #fc9;
+  border-color: #c9f;
+  font-size: small;
+  font-family: 'Inter';
+}
+.compliance:hover {
+  background-color: hsl(30, 100%, 76%) !important;
+  border-color: hsl(270, 100%, 76%);
+  text-shadow: 0px 0px 0px !important;
+}
+.compliance:active {
+  text-shadow: none !important;
+  /* border-style: none; */
+  box-shadow: none;
+}
+.compliance:focus {
+  background-color: #fc9 !important;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  .profile-form-ask {
+    display: flex;
+    min-height: 23vw;
+    max-height: 23vw;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0 !important;
+    margin-bottom: 3vh !important;
+    font-size: calc(3vh - 2.5vw);
+  }
+  span.meets-compliance {
+    color: #adebcb;
+  }
+  .dollar-limit {
+    color: #20cf9d;
+  }
+  .profile-form-ask .submit-btn.compliance {
+    margin-top: calc(2vw);
+  }
+}
+  
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  p.reminder {
+    color: #f9c !important;
+  }
+}

@@ -1,0 +1,38 @@
+.alert-emailed-link {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: baseline;
+  z-index: 3000;
+  border-color: #087990;
+  border-width: 2px;
+}
+.alert-emailed-link p {
+  color: #525252;
+  font-family: 'Inter';
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  .alert-emailed-link {
+    padding-right: 1.5rem;
+    top: 46%;
+  }
+}
+/* Big Screen */
+@media only screen and (min-width: 1800px) and (orientation: landscape) {
+  .alert-emailed-link {
+    width: 20vw;
+    margin: 0 auto;
+    padding-right: 1.5rem;
+    padding-bottom: 1rem;
+    line-height: 0.95rem;
+    top: 59%;
+    left: 44.25%;
+  }
+  .alert-emailed-link p {
+    padding-top: 0.5rem;
+    font-size: 0.825rem;
+  }
+}

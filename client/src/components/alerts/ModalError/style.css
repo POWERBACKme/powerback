@@ -1,0 +1,23 @@
+.error-alert {
+  text-align: center;
+  text-shadow: none !important;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  .error-alert {
+    height: 48px;
+    padding-top: 0.875rem;
+    margin-bottom: 0 !important;
+  }
+}
+  
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  .error-alert {
+    margin-top: 2px !important;
+    padding-top: 0.6rem;
+    padding-bottom: 0.65rem;
+    margin-bottom: 0 !important;
+  }
+}

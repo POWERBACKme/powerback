@@ -1,0 +1,23 @@
+.loading-headshots > h2 {
+  color: #ccc !important;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  .loading-headshots > h2 {
+    height: 5rem;
+    display: inline-block;
+    font-size: 2rem;
+    margin-top: 42vw;
+    margin-left: calc(50vw - 50%);
+  }
+}
+/* Big Screen */
+@media only screen and (min-width: 1800px) and (orientation: landscape) {
+  .loading-headshots > h2 {
+    height: 5rem;
+    display: inline-block;
+    font-size: 2rem;
+    margin-top: 130px;
+  }
+}

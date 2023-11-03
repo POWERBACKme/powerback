@@ -1,0 +1,12 @@
+#side-nav-marquee {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+#side-nav-marquee p {
+  padding-bottom: 2vw;
+}
+#side-nav-marquee p .day-counter {
+  color: #f9c;
+}
+
+

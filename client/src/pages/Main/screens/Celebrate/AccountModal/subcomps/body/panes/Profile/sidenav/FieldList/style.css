@@ -1,0 +1,11 @@
+#account-modal div.list-group-item:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+ 
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  i {
+    font-size: larger;
+  }
+}

@@ -1,0 +1,30 @@
+.button--continue {
+  width: 60%;
+  color: #c9f !important;
+  border-color: #c9f !important;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  .button--continue {
+    --bs-btn-padding-y: 0.33rem;
+  }
+}
+/* Desktop */
+@media only screen and (min-width: 1200px) {
+  .button--continue {
+    cursor: pointer !important;
+  }
+  .button--continue:hover {
+    color: #a9c9a2 !important;
+    background-color: #181f23;
+    border-color: #c9f !important;
+  }
+  .button--continue:active {
+    color: #a9c9a2 !important;
+    border-top: 2px inset #73578f80 !important;
+    border-right: 2px inset #73578f80 !important;
+    border-bottom: 1px inset #73578f80 !important;
+    border-left: 1px inset #73578f80 !important;
+  }
+}

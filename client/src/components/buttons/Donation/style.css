@@ -1,0 +1,44 @@
+.donation-amt-btn {
+  color: #ccc;
+  background-color: #2d3e3c;
+  border: 1px outset #cc99ff80;
+}
+.donation-amt-btn.active {
+  background-color: #181f23;
+  border-top: 1px outset hsl(189, 14%, 30%, 0.5);
+  border-right: 2px inset hsl(189, 14%, 30%, 0.5);
+  border-bottom: 1px inset hsl(189, 14%, 30%, 0.5);
+  border-left: 1px inset hsl(189, 14%, 30%, 0.5);
+  color: #9bad97;
+}
+.donation-check {
+  position: absolute;
+  text-shadow: -1.5px -1.5px 1.5px #020202bf;
+  margin-left: -2rem;
+  margin-top: -1rem;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  .donation-amt-btn.btn.btn-secondary.btn-sm {
+    width: calc(20% - -2rem);
+    min-height: calc(5vw + 3vh);
+    margin-top: 0.5rem;
+    margin-right: 0.375rem;
+    margin-bottom: -0.125rem;
+    margin-left: 0.375rem;
+    font-size: calc(1vw + 2vh);
+  }
+}
+  
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  .donation-amt-btn {
+    width: calc(50% - 0.75rem);
+    min-height: 3.25rem;
+    margin-top: 0.5rem;
+    margin-left: 0.375rem;
+    margin-right: 0.375rem;
+    font-size: calc((1vw + 1vh) / 1.25);
+  }
+}

@@ -1,0 +1,197 @@
+#login .btn,
+#forgot-pass-pop .submit-btn {
+  background-color: #c9f !important;
+  font-family: 'Inconsolata';
+  font-weight: 700;
+}
+.continue-btn-placeholder {
+  color: black;
+}
+.splash-icon {
+  filter: brightness(0) saturate(100%) invert(97%) sepia(1%) saturate(129%)
+    hue-rotate(314deg) brightness(60%) contrast(89%);
+}
+#login .toc label.form-check-label {
+  color: #fc9 !important;
+}
+#login .toc a {
+  color: #6da7f9;
+}
+.input--translucent .form-control,
+#forgot-pass-pop #validation-username-undefined.form-control {
+  color: #c8c7cc;
+  background-color: #080808;
+  border-left: none;
+  border: 1px solid #c9f;
+  border-top-right-radius: 3px !important;
+  border-bottom-right-radius: 3px !important;
+  border-style: ridge;
+  font-family: 'Inconsolata' !important;
+}
+.input--translucent .form-control:focus,
+#forgot-pass-pop #validation-username-undefined.form-control:focus {
+  background-color: #0a0a0a;
+  border-style: solid !important;
+  box-shadow: inset 1px 1px 2px 1px #cc99ff26;
+}
+/* Sign-in/-up Toggle Labels */
+.input--translucent .input-icon.input-group-text {
+  border-right: none;
+}
+.input--translucent .input-icon.nub.input-group-text {
+  border-right: 2px solid #3c3c3b !important;
+}
+.input--translucent label {
+  color: #c9f !important;
+}
+.input--translucent:focus-within label {
+  color: hsl(270, 100%, 85%) !important;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  .splash-icon {
+    margin-top: -0.25rem;
+    margin-left: 1rem;
+  }
+  .input--translucent {
+    padding-bottom: 0.125rem;
+  }
+  #login label.btn.btn-primary {
+    color: #c9f !important;
+    width: 25vw !important;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: #cccccc17 !important;
+    border: 1px solid blue !important;
+    font-size: 12px !important;
+  }
+  #login label.btn.btn-primary:hover {
+    color: #2b2b2b !important;
+    background-color: #c9f !important;
+    border: 1px solid #f9c !important;
+  }
+  .cta-form-btn {
+    display: flex;
+    flex-direction: column;
+    border: none !important;
+    margin-bottom: 0.125rem;
+  }
+  .login-toggle-selection {
+    color: #6da7f9 !important;
+  }
+  .scoot {
+    margin-right: 5vw;
+  }
+  .toc label.form-check-label {
+    margin-top: 1vw !important;
+    margin-left: -1vw;
+  }
+  #login .toc label.form-check-label,
+  #login .toc a {
+    font-size: calc(3.5vw) !important;
+  }
+  button.continue-btn-placeholder.placeholder-wave.btn.btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 48px;
+    border-radius: 4px;
+    --bs-btn-hover-color: black;
+    --bs-btn-active-color: black;
+  }
+  i.bi.bi-hourglass-split.fs-5 {
+    margin-top: 0;
+  }
+  .signin-links {
+    font-size: small;
+  }
+}
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  .toc {
+    width: 80% !important;
+  }
+  #login .terms-link {
+    margin-left: 0.06125em !important;
+  }
+  #login .toc label.form-check-label {
+    display: inline-block;
+    margin-top: 6px !important;
+    margin-left: -1.25em;
+  }
+  .input--translucent .form-control {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    width: 80% !important;
+  }
+  .input--translucent .form-control:focus {
+    font-size: 0.85rem;
+    letter-spacing: normal;
+  }
+  .userpass--col .form-group.input-group.has-validation {
+    flex-wrap: wrap !important;
+  }
+  #login input#validation-username {
+    width: 0 !important;
+  }
+  #login input#validation-password {
+    width: 0 !important;
+  }
+  .login-toggle-selection {
+    color: #c9f !important;
+    cursor: pointer !important;
+  }
+}
+/* Desktop */
+@media only screen and (min-width: 1200px) {
+  #login .form-input-wfeedback {
+    min-height: 60px;
+  }
+  .splash-icon {
+    margin-left: 1rem;
+  }
+  #login .btn-lg {
+    width: 100%;
+    font-size: 0.8rem;
+    height: 4vh;
+  }
+  #login .btn:hover,
+  #forgot-pass-pop .submit-btn:hover {
+    color: #2b2b2b;
+    background-color: #d1a3ff !important;
+    border: 1px solid #9bad97 !important;
+  }
+  .continue-btn-placeholder {
+    height: 38.75px !important;
+    width: 100%;
+    margin-top: 2px !important;
+  }
+  #accept-terms.form-check-input {
+    float: none;
+  }
+  span.forgot-pass-link.natural-link {
+    font-family: 'Inconsolata';
+    font-size: 0.8rem;
+  }
+  label {
+    font-size: 13px !important;
+  }
+  .input--translucent label {
+    margin-bottom: 4px;
+    margin-left: 1px;
+  }
+}
+/* Big Screen */
+@media only screen and (min-width: 2000px) and (orientation: landscape) {
+  .input--translucent label {
+    font-size: 1rem !important;
+  }
+  #login .btn-lg {
+    font-size: 1rem;
+  }
+  span.forgot-pass-link.natural-link {
+    font-size: 1rem;
+  }
+}

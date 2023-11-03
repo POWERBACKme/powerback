@@ -1,0 +1,7 @@
+.form-control::placeholder {
+  color: #bac7b8;
+  font-family: 'Inconsolata';
+}
+.tabpane-account-event-Celebrations {
+  overflow-x: hidden !important;
+}

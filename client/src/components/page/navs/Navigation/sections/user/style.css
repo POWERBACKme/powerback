@@ -1,0 +1,10 @@
+.account-logout--row {
+  align-items: baseline !important;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+#navbar-logout:hover {
+  color: #8bbbfd;
+  text-shadow: 0px 0px #cccccc21;
+}
+

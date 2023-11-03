@@ -1,0 +1,75 @@
+#account-modal div.modal-body {
+  background: #2a2b27;
+}
+#account-modal .nav-link {
+  color: #c9f;
+}
+#account-modal .nav-link:hover {
+  color: #d9b3ff;
+}
+#account-modal .nav-link:active {
+  color: #bf80ff;
+}
+#account-modal .nav-link.active {
+  cursor: default !important;
+}
+#account-modal .side-pills .nav-link {
+  color: #9cf;
+}
+#account-modal .side-pills .nav-link:hover {
+  color: #bddeff;
+}
+#account-modal .side-pills .nav-link:active {
+  color: #80bfff;
+}
+#account-modal .side-pills .nav-link.active {
+  color: #1c1c1c;
+  background-color: #9cf;
+}
+#account-modal .side-pills .nav-link.active:hover {
+  cursor: default !important;
+}
+#account-modal .nav-link.active {
+  background-color: #f9c;
+  color: #2a2b27;
+}
+#account-modal div.profile-list-group.list-group {
+  --bs-list-group-bg: #1f1f1f;
+  border-radius: 0.5rem;
+}
+#account-modal div.list-group-item {
+  align-items: baseline;
+  font-family: 'Inconsolata';
+}
+#account-modal .modal-footer {
+  display: none !important;
+}
+#account-modal .side-pills.justify-content-end.nav.nav-pills {
+  justify-content: center !important;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  #account-modal div.modal-header {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+  }
+  #account-modal div.modal-body {
+    height: 140vw;
+    touch-action: pinch-zoom;
+  }
+  #account-modal .side-pills .nav-link.active {
+    padding-bottom: 10px;
+  }
+}
+  
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  #account-modal div.modal-body {
+    height: 43vh !important;
+    overflow-x: hidden;
+  }
+  #account-modal div.profile-list-group.list-group {
+    font-size: smaller;
+  }
+}

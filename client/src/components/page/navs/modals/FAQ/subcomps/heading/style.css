@@ -1,0 +1,71 @@
+#faq-modal div.modal-title {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.modal-heading {
+  background: #1b1b1b;
+}
+.modal-heading,
+.styled-modal .modal-title h1 {
+  border-color: #9bad97;
+}
+#faq-modal .nav-link {
+  color: #c9f;
+}
+#faq-modal .nav-link.active {
+  background-color: #f9c;
+  color: #2a2b27;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, THIN portrait */
+@media only screen and (max-width: 389px) and (orientation: portrait) {
+  #faq-modal .nav {
+    --bs-nav-link-padding-x: 1vw !important;
+  }
+}
+/* Mobile, SHORT portrait */
+@media only screen and (max-height: 650px) and (max-width: 420px) and (orientation: portrait) {
+  #faq-modal div.modal-title {
+    margin-right: 5vw;
+  }
+  #faq-modal-nav.nav-pills {
+    margin-left: 5vw;
+    margin-right: -5vw;
+  }
+  #faq-modal div.modal-title .nav-link {
+    font-size: calc(5vh - 4.5vw) !important;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+}
+/* Mobile, portrait */
+@media only screen and (min-height: 651px) and (max-width: 599px) and (orientation: portrait) {
+  #faq-modal div.modal-title .nav-link {
+    font-size: calc(5vh - 5vw) !important;
+    padding-top: 1vw;
+    margin-bottom: -1vw;
+    padding-right: 2vw;
+    padding-bottom: 1vw;
+    padding-left: 2vw;
+  }
+  #faq-modal .nav {
+    --bs-nav-link-padding-x: 1.75vw;
+  }
+  #faq-modal .nav-link,
+  #faq-modal .nav-link.active {
+    font-size: 3.75vw;
+  }
+  #faq-modal-nav {
+    margin-left: 5vw;
+  }
+}
+
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  #faq-modal div.modal-title {
+    width: 765px;
+  }
+}

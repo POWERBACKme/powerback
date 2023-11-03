@@ -1,0 +1,61 @@
+.secure-user-pass {
+  color: #ccc;
+  background-color: #2e2e2ed9;
+  border: 1px solid #c9f;
+}
+.secure-user-pass form {
+  display: block;
+}
+.secure-user-pass .submit-btn {
+  color: black;
+  font-family: 'Inconsolata';
+  font-weight: 700;
+  border-color: #9bad97;
+}
+.secure-user-pass .submit-btn:focus,
+.secure-user-pass .submit-btn:hover,
+.secure-user-pass .submit-btn:active {
+  background-color: #c9f;
+}
+.secure-user-pass .valid-feedback,
+.secure-user-pass .invalid-feedback {
+  color: #ff99b0 !important;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  .secure-user-pass .btn {
+    margin-top: 1.75rem;
+  }
+  .secure-user-pass div.col-12.userpass--col {
+    height: 10vh !important;
+  }
+}
+  
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  .secure-user-pass {
+    padding: 6px;
+    min-height: 100%;
+  }
+  .secureuserpass--row {
+    height: 72.25vh;
+    padding-top: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .secureuserpass--col {
+    max-height: 66vh;
+    width: 29vw;
+  }
+  .secureuserpass--row .userpass--col .form-group.input-group.has-validation {
+    flex-wrap: wrap !important;
+  }
+  .secure-user-pass div.col-12.userpass--col {
+    height: 9vh !important;
+  }
+  .secure-user-pass .btn {
+    /* width: 50%; */
+    width: 20vw;
+  }
+}

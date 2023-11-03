@@ -1,0 +1,20 @@
+.navbar-brand {
+  filter: brightness(0) saturate(100%) invert(97%) sepia(1%)
+    hue-rotate(314deg) contrast(89%);
+}
+.navbar-text {
+  color: #ccc !important;
+}
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  .navbar-text {
+    color: #9bad97 !important;
+    font-size: calc(1.9vh);
+  }
+}
+/* Big Screen */
+@media only screen and (min-width: 1800px) and (orientation: landscape) {
+  .navbar-brand {
+    margin-right: -9.75rem;
+  }
+}

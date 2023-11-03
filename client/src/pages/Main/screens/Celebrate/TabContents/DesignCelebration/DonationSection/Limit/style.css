@@ -1,0 +1,100 @@
+#limit-modal .modal-content {
+  box-shadow: 0 0 7px #ffc1073b !important;
+}
+#limit-modal .modal-header {
+  border: 3px #ffc10780 solid;
+  border-bottom: 1px #fc9 solid;
+}
+#limit-modal .modal-title {
+  color: #fc9 !important;
+  text-shadow: 0 0 1px #ccc;
+}
+#limit-modal div.modal-body {
+  background: #2a2b27;
+  border: 3px #ffc10780 solid;
+  text-align: center;
+}
+#limit-modal div.modal-body .dollar-amount {
+  color: #fc9;
+}
+#limit-modal sup.super a {
+  color: #8bb9f2 !important;
+}
+#limit-modal div.list-group {
+  --bs-list-group-bg: #1f1f1f;
+}
+#limit-modal div.list-group-item {
+  font-family: 'Inconsolata';
+  color: #a9a9a9 !important;
+}
+#limit-modal div.text-muted.citation.glow.list-group-item {
+  color: #8bb9f2 !important;
+}
+#limit-modal div.text-muted.citation.list-group-item div.hstack {
+  text-align: left;
+  align-items: baseline;
+}
+#limit-modal p {
+  color: #ccc;
+  font-family: 'Inconsolata';
+  text-align: left;
+}
+#limit-modal .list-group.footnotes {
+  min-width: 120% !important;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  #limit-modal div.modal-body {
+    border-width: 1px;
+  }
+  #limit-modal div.modal-body {
+    overflow-x: hidden !important;
+  }
+  #limit-modal p {
+    font-size: calc(2.25vw + 1vh);
+    line-height: calc(2.25vw + 1vh);
+  }
+  #limit-modal sup.super a {
+    font-size: 0.5rem;
+  }
+  #limit-modal .text-muted.citation.list-group-item {
+    font-size: 0.75rem !important;
+    align-items: center;
+  }
+  #limit-modal .text-muted.citation.list-group-item em {
+    text-align: start;
+  }
+}
+  
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  #limit-modal div.modal-content {
+    width: 25vw;
+    line-height: 1.5rem;
+  }
+  #limit-modal div.modal-body {
+    overflow-x: hidden;
+  }
+  #limit-modal div.list-group {
+    font-size: x-small;
+  }
+  .close {
+    font-size: 2em;
+  }
+  .citation {
+    font-size: x-small;
+    text-align: start;
+    line-height: 1rem;
+  }
+  .citation-uri {
+    text-align: center;
+    word-break: normal;
+    padding-right: calc(1vw - 1vh);
+    max-width: 75%;
+    cursor: text;
+  }
+  .super {
+    font-size: x-small;
+  }
+}

@@ -1,0 +1,56 @@
+.donation-counter {
+  color: #cfc;
+  font-family: 'Oswald';
+}
+.donation-amount {
+  color: #20cf9d;
+  font-family: 'Red Hat Text';
+  float: right;
+}
+.vertical-timeline-element {
+  font-family: 'Inconsolata';
+}
+.vertical-timeline-element-content {
+  border-top-left-radius: 7%;
+}
+span.vertical-timeline-element-date {
+  width: 100%;
+}
+img.receipt-mark {
+  position: absolute;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  .vertical-timeline-element-content {
+    box-shadow: 0 2px 0 #fc9;
+    border-left: #fc9 solid 1px;
+  }
+  .donation-counter {
+    margin-bottom: calc(1vh - 1vw);
+  }
+  img.receipt-mark {
+    left: 77% !important;
+    top: 78%;
+  }
+}
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  img.receipt-mark {
+    left: 80%;
+    top: 79%;
+  }
+}
+/* Big Screen */
+@media only screen and (min-width: 1800px) and (orientation: landscape) {
+  .vertical-timeline-element-content {
+    margin-right: calc(11vh) !important;
+    box-shadow: 0 3px 0 #fc9;
+    border-left: #fc9 solid 2px;
+  }
+  .vertical-timeline-element {
+    margin-top: calc(1vw - 1vh);
+    margin-right: calc(10vw - 17.2vh);
+    margin-bottom: calc(1vw + 1vh);
+  }
+}

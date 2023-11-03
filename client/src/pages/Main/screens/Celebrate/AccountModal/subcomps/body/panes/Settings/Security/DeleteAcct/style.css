@@ -1,0 +1,86 @@
+.delete-account--col {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-evenly;
+}
+.delete-acct-instructions {
+  line-height: 1.5rem;
+  user-select: none;
+}
+.input-pattern {
+  color: #0f0 !important;
+  vertical-align: middle;
+  font-family: 'Inconsolata';
+}
+.delete-account-btn {
+  color: black !important;
+  border: 1px solid #1e1e1e;
+  text-shadow: -1px 1px 3px white;
+  background: repeating-linear-gradient(
+    45deg,
+    #b02a37,
+    #b02a37 40px,
+    #dc3545 40px,
+    #dc3545 60px
+  );
+  font-family: 'Inconsolata';
+  font-weight: 900 !important;
+}
+.delete-account-btn:hover {
+  color: #e9ffd1 !important;
+  text-shadow: -1px 1px 3px #1e1e1e;
+  background: repeating-linear-gradient(
+    45deg,
+    #a51d2b,
+    #a51d2b 40px,
+    #b02a37 40px,
+    #b02a37 60px
+  );
+}
+.delete-account-btn:active {
+  color: #f9c !important;
+  text-shadow: 1px -1px 3px #1e1e1e;
+  background: repeating-linear-gradient(
+    45deg,
+    #a51d2b,
+    #a51d2b 40px,
+    #a52834 40px,
+    #a52834 60px
+  );
+}
+.bi.bi-exclamation-triangle-fill.text-danger {
+  background-color: #fc9 !;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  .delete-acct-instructions {
+    font-size: 1.125em;
+  }
+  .settings-security .form-input-wfeedback {
+    height: 51px !important;
+  }
+  .input-pattern {
+    font-size: 1.8em;
+  }
+  .no-refunds {
+    font-size: 0.7em !important;
+  }
+}
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  form#delete-modal-input .row,
+  form#delete-modal-input p {
+    font-size: 0.8em;
+  }
+  .input-pattern {
+    font-size: 1.8em;
+  }
+  .no-refunds {
+    font-size: 1em !important;
+  }
+  form.change-password .userpass--col {
+    height: 8vh;
+  }
+}

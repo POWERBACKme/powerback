@@ -1,0 +1,26 @@
+/* Mobile */
+@media only screen and (max-height: 936px) and (orientation: portrait) {
+  .payment.row {
+    width: 99.6vw;
+    max-height: 66vh;
+  }
+  .payment.col .checkout-card {
+    min-height: 0;
+  }
+  .payment.col .card-img-top {
+    width: 100% !important;
+  }
+  #donate-tab-container-tabpane-tips .payment.row {
+    flex-direction: row;
+  }
+  div.contingencies-checkbox.form-check label.form-check-label {
+    font-size: 0.75rem !important;
+  }
+}
+/* Desktop */
+@media only screen and (min-height: 900px) and (orientation: landscape) {
+  .payment.row {
+    padding-top: 0 !important;
+    width: 32vw;
+  }
+}

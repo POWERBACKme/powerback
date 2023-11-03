@@ -1,0 +1,70 @@
+p.tip-ask {
+  font-family: 'Inconsolata';
+  line-height: 1.5rem;
+}
+.card-footer p {
+  text-align: center !important;
+}
+.tip-submit--btn-spinner button.button--continue.btn {
+  border: none;
+  width: 100%;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.tip-submit--btn-spinner button.button--continue.btn:hover,
+.tip-submit--btn-spinner button.button--continue.btn:focus {
+  color: #9fc !important;
+  background-color: #1e1e1e !important;
+  padding-bottom: 1vh;
+}
+.tip-submit--btn-spinner button.button--continue.btn:active {
+  background-color: #1b1b1b !important;
+}
+.tip-ask-spinner {
+  color: #f9c;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  .tip-ask {
+    text-align: center;
+  }
+  #tip-ask.checkout-card {
+    min-height: 0 !important;
+    /* height: auto !important; */
+  }
+  .tip-submit--btn-spinner button.button--continue.btn {
+    margin-top: -0.5vh;
+    padding-bottom: 1.25vh !important;
+  }
+  .tip-submit--btn-spinner {
+    height: 11.5vw;
+  }
+  .tip-ask-spinner {
+    color: #f9c;
+    height: 8vw;
+    width: 8vw;
+    margin-top: calc(-2vw + 2vh);
+  }
+  #tip-ask .card-footer p {
+    font-size: 12px;
+  }
+}
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  .tip-ask {
+    line-height: 1.5rem;
+  }
+  #tip-ask .card-footer p {
+    font-size: 0.75rem;
+  }
+  #tip-ask .card-footer {
+    min-height: 5.1vh;
+  }
+  .tip-submit--btn-spinner {
+    height: 4.13vh;
+  }
+  .tip-ask-spinner.spinner-border {
+    margin-top: calc((3vw - 2vh) / 6);
+  }
+}

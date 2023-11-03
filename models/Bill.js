@@ -1,0 +1,61 @@
+const mongoose = require('mongoose'),
+  Schema = mongoose.Schema;
+
+const billSchema = new Schema(
+  {
+    bill_id: { type: 'object', properties: [Object], index: { unique: true } },
+    bill_slug: { type: 'object', properties: [Object] },
+    congress: { type: 'object', properties: [Object] },
+    bill: { type: 'object', properties: [Object] },
+    bill_type: { type: 'object', properties: [Object] },
+    number: { type: 'object', properties: [Object] },
+    bill_uri: { type: 'object', properties: [Object] },
+    title: { type: 'object', properties: [Object] },
+    short_title: { type: 'object', properties: [Object] },
+    sponsor_title: { type: 'object', properties: [Object] },
+    sponsor: { type: 'object', properties: [Object] },
+    sponsor_id: { type: 'object', properties: [Object] },
+    sponsor_uri: { type: 'object', properties: [Object] },
+    sponsor_party: { type: 'object', properties: [Object] },
+    sponsor_state: { type: 'object', properties: [Object] },
+    gpo_pdf_uri: { type: 'object', properties: [Object] },
+    congressdotgov_url: { type: 'object', properties: [Object] },
+    govtrack_url: { type: 'object', properties: [Object] },
+    introduced_date: { type: 'object', properties: [Object] },
+    active: { type: 'object', properties: [Object] },
+    last_vote: { type: 'object', properties: [Object] },
+    house_passage: { type: 'object', properties: [Object] },
+    senate_passage: { type: 'object', properties: [Object] },
+    enacted: { type: 'object', properties: [Object] },
+    vetoed: { type: 'object', properties: [Object] },
+    houseMembers: { type: 'object', properties: [Object] },
+    houseMembers_by_party: { type: 'object', properties: [Object] },
+    withdrawn_houseMembers: { type: 'object', properties: [Object] },
+    primary_subject: {
+      type: 'object',
+      properties: [Object],
+      index: { unique: false },
+    },
+    committees: { type: 'object', properties: [Object] },
+    committee_codes: { type: 'object', properties: [Object] },
+    subcommittee_codes: { type: 'object', properties: [Object] },
+    latest_major_action_date: { type: 'object', properties: [Object] },
+    latest_major_action: { type: 'object', properties: [Object] },
+    house_passage_vote: { type: 'object', properties: [Object] },
+    senate_passage_vote: { type: 'object', properties: [Object] },
+    summary: { type: 'object', properties: [Object] },
+    summary_short: { type: 'object', properties: [Object] },
+    cbo_estimate_url: { type: 'object', properties: [Object] },
+    versions: { type: 'object', properties: [Object] },
+    actions: { type: 'object', properties: [Object] },
+    presidential_statements: { type: 'object', properties: [Object] },
+    votes: { type: 'object', properties: [Object] },
+    createdAt: { type: Date, default: Date.now },
+    updatedAt: { type: Date, default: Date.now },
+  },
+  { timestamps: true }
+);
+
+const Bill = mongoose.model('Bill', billSchema);
+
+module.exports = Bill;

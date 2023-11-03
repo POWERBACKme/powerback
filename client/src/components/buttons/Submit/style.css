@@ -1,0 +1,37 @@
+.submit-btn {
+  color: hsl(241, 100%, 19%) !important;
+  background: #c9f;
+  box-shadow: 0px 0px 3px hsla(0, 0%, 0%, 0.267);
+  border-color: #6f42c1 !important;
+}
+.submit-btn:focus-visible {
+  color: hsl(241, 100%, 19%) !important;
+  background: #c9f;
+  box-shadow: 0px 0px 3px hsla(0, 0%, 0%, 0.267);
+  border-color: #6f42c1 !important;
+}
+ 
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  .submit-btn {
+    width: auto;
+    min-height: 39px;
+    max-height: 5vmax;
+    margin-top: 0.125rem;
+  }
+}
+/* Desktop */
+@media only screen and (min-width: 1200px) {
+  .submit-btn:hover {
+    background: hsl(270, 100%, 82%) !important;
+    color: hsl(241, 100%, 17%) !important;
+  }
+  .submit-btn:active {
+    transition: quikpress; /* overrides transition making it immediate */
+    color: hsl(241, 100%, 25%) !important;
+    text-shadow: 2px 2px 1px hsla(0, 0%, 100%, 0.2);
+    background: hsl(270, 100%, 78%) !important;
+    border-style: inset;
+    box-shadow: 1px 1px 1px hsla(0, 0%, 100%, 0.2);
+  }
+}

@@ -1,0 +1,22 @@
+.explore {
+  color: #fc9;
+  float: right;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  .explore {
+    font-size: 1.06125em;
+    margin-bottom: 0.67vh !important;
+  }
+}
+ 
+  
+   
+/* Desktop */
+@media only screen and (min-width: 1200px) {
+  .explore {
+    font-size: 1.06125em;
+    margin-bottom: 0.8vh !important;
+  }
+}

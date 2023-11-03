@@ -1,0 +1,132 @@
+.checkout-card {
+  color: #ccc;
+  background-color: #2e2e2ed9;
+  border: 1px solid #c9f;
+}
+.checkout-card .card-header {
+  background-color: #3e3e3e;
+  text-align: left;
+}
+.checkout-card .card-title {
+  font-family: 'Oswald';
+}
+.checkout-card .card-text {
+  font-family: 'Inter';
+}
+.pending-choices {
+  flex-direction: column;
+  align-content: center;
+}
+.subtitle {
+  color: #ccc;
+  font-family: 'Inconsolata';
+}
+.checkout-card .card-title .row {
+  color: #9bad9b;
+}
+.checkout-card.pending-card .card-body {
+  padding-top: 0.7em;
+  font-family: 'Inconsolata';
+}
+.checkout-headshot {
+  min-width: 23vh;
+  max-width: 23vh;
+  min-height: 28vh;
+  border-radius: 5px;
+  background-color: #9bad977e;
+}
+.checkout-pol-heading {
+  background-color: #9bad977e;
+  min-height: 41.08px;
+}
+.checkout-card .body-top img.card-img-top {
+  border: 1px solid #fc9;
+}
+.checkout-card .list-group-item {
+  padding-right: 2vw;
+  background-color: transparent !important;
+}
+#checkout-total {
+  font-weight: 600;
+  color: #9bad9b;
+}
+.card-footer:last-child {
+  padding: 0;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  .checkout-card {
+    max-height: 67vh;
+    min-height: 67vh;
+  }
+  .surcharge-list-group-item {
+    max-height: 0 !important;
+  }
+  p#surcharge-info {
+    text-align: left;
+    font-size: calc(1vw + 1vh);
+    min-height: 6.43vh;
+    max-height: 7.43vh;
+  }
+  .checkout-card .list-group-flush.list-group.list-group-flush {
+    display: inline-flex;
+    width: 95%;
+  }
+  .checkout-card .list-group-item {
+    padding: 0.25rem 0rem;
+    font-size: 13px;
+    min-height: 3.42vh;
+  }
+  .bill-of-sale {
+    padding: 0 !important;
+  }
+  .subtitle {
+    font-size: calc(2vw + 1vh);
+  }
+  #checkout-total {
+    padding-top: 0.75rem;
+  }
+}
+
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  .checkout-card .card-title .row {
+    font-size: 1.5rem !important;
+  }
+  .pending-choices {
+    line-height: 1.5rem;
+  }
+  .subtitle {
+    font-size: 1rem !important;
+  }
+  .checkout-card .card-title .row {
+    margin-bottom: 0;
+  }
+  .checkout-card .body-top {
+    align-items: center;
+  }
+  .checkout-card .body-top img.card-img-top {
+    width: 20.6vh;
+  }
+  #checkout-details {
+    flex-direction: column;
+  }
+  .checkout-card .list-group-item {
+    width: 100%;
+    text-align: start;
+  }
+  .checkout-card .list-group-item .row {
+    width: 100%;
+    justify-content: space-between;
+  }
+  #surcharge-info {
+    text-align: justify;
+    margin-left: 0.25rem;
+    margin-right: -0.25rem;
+    font-size: 0.75em;
+  }
+  #equalize-label {
+    font-size: smaller;
+  }
+}

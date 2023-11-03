@@ -1,0 +1,36 @@
+.choose-amount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0 !important;
+}
+.loading {
+  color: #f9c;
+  text-align: center;
+}
+.hide-cont--btn {
+  display: none;
+}
+.show-cont--btn {
+  display: block;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  .loading {
+    font-size: calc(5vw + 2vh);
+    line-height: 1.5em;
+    max-width: 100vw;
+  }
+  .show-cont--btn.col {
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+/* Big Screen */
+@media only screen and (min-width: 1800px) and (orientation: landscape) {
+  .loading {
+    font-size: 5.3rem;
+    line-height: 7rem;
+  }
+}

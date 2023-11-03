@@ -1,0 +1,50 @@
+#eligibility-modal div.modal-body {
+  background: #2a2b27;
+  line-height: 1.5rem;
+}
+#eligibility-modal div.list-group.list-group {
+  --bs-list-group-bg: #2a2b27 !important;
+}
+#eligibility-modal div.list-group-item {
+  color: #9fc !important;
+  --bs-list-group-border-color: #9bad97;
+  border-radius: 0%;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  line-height: 1.5rem;
+}
+#eligibility-modal div.list-group.list-group,
+.list-group-item.escrow-info {
+  font-family: 'Inconsolata';
+}
+.list-group-item.escrow-info {
+  text-align: center;
+  line-height: 1rem;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  #eligibility-modal div.modal-body {
+    padding-top: 0;
+    font-size: 0.75em;
+    
+    max-height: calc(58vw + 47vh);
+    /* max-height: 77.75vh !important; */
+  }
+}
+  
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  #eligibility-modal div.modal-body {
+    height: auto;
+  }
+  #eligibility-modal div.list-group.list-group {
+    margin-top: -1.5rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+  .list-group-item.escrow-info {
+    padding-inline: 1rem;
+  }
+}

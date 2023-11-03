@@ -1,0 +1,77 @@
+#celebrate--page {
+  flex-direction: column;
+}
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+.list-group-item.completed {
+  text-decoration: underline;
+  font-weight: 100 !important;
+}
+.list-group-item.completed:hover {
+  color: #1b1b1b !important;
+  cursor: pointer;
+}
+.celebration-routing {
+  justify-content: space-evenly;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  #celebrate--page {
+    --bs-gutter-x: 0;
+    display: flex;
+    align-items: center;
+  }
+  .celebrate-container {
+    padding-top: 4vmax;
+  }
+  .controlled-tab > a {
+    width: 22vw;
+  }
+}
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  #server-down {
+    padding-top: 13rem;
+  }
+  .controlled-tab {
+    font-size: 0.87rem;
+  }
+  .celebrate-container {
+    padding-top: 1.5rem;
+  }
+  .valid-feedback,
+  .invalid-feedback {
+    margin-top: 0.125rem;
+  }
+  .alert-dismissible .btn-close {
+    padding-bottom: 0.5rem !important;
+  }
+  .list-group-tabs {
+    display: flex;
+    justify-content: center;
+  }
+  .controlled-tab > a {
+    width: 8vw;
+  }
+}
+/* Big Screen */
+@media only screen and (min-width: 1800px) and (orientation: landscape) {
+  #celebrate--page {
+    padding-top: 3rem;
+    --bs-gutter-x: 1.5rem !important;
+  }
+  .celebrate-container {
+    max-width: 100vw !important;
+  }
+  body {
+    max-height: 100vh !important;
+  }
+  /* center the smaller "tip" card */
+  #celebrate-tab-container-tabpane-tips.fade.tab-pane.active.show {
+    display: inline-block;
+  }
+}

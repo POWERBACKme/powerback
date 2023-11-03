@@ -1,0 +1,48 @@
+.btn-container {
+  background: transparent;
+  border: none;
+}
+.btn-grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.tips-btn-grid {
+  flex-direction: row-reverse;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  .tips-btn-grid {
+    padding: 0 0.5rem;
+  }
+  p.tip-ask.form-info {
+    margin-bottom: -9px;
+    font-size: 0.66rem;
+  }
+  .btn-container {
+    padding-bottom: 0.5em;
+  }
+}
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  .btn-container {
+    margin-top: 0.5rem;
+    margin-bottom: 0.6rem;
+  }
+  .tips-btn-grid {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  p.tip-ask.form-info {
+    margin-bottom: -0.5em !important;
+    text-align: center;
+  }
+}
+/* Big Screen */
+@media only screen and (min-width: 1800px) and (orientation: landscape) {
+  .btn-container {
+    width: 100%;
+  }
+}

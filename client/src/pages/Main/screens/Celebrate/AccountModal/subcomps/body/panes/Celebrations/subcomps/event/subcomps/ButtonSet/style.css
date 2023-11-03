@@ -1,0 +1,37 @@
+.msg-sent {
+  color: #9bad97;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  .donation-receipt-btn-group button.generic-btn {
+    font-size: calc(2vh - 1vw) !important;
+    height: 4.4vh;
+  }
+  .receipt-tweet {
+    font-size: calc(4vw + 3vh);
+  }
+  .receipt-btn {
+    height: 4.4vh;
+    width: 23vw;
+  }
+  .msg-sent {
+    height: 4.4vh;
+    width: 23vw;
+    padding-top: 1vh;
+    padding-left: 3vw;
+  }
+}
+  
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  .donation-receipt-btn-group button.generic-btn {
+    height: 4.4vh;
+  }
+  .msg-sent {
+    height: 4.4vh;
+    width: 5.67vw;
+    padding-top: 1vh;
+    padding-left: 1vw;
+  }
+}

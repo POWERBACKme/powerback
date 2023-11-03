@@ -1,0 +1,27 @@
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  main.wrapper-pol-donation,
+  main.wrapper-payment,
+  main.wrapper-support,
+  main.wrapper-tips {
+    display: flex;
+    align-items: center;
+    /* height: calc(81vmin + 27vmax) !important; */
+    height: calc(105vmin + 15vmax) !important;
+  }
+}
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  main.wrapper,
+  main.wrapper-pol-donation {
+    height: 100vh !important;
+  }
+  main.wrapper-payment,
+  main.wrapper-support {
+    height: 80vh !important;
+  }
+  main.wrapper-tips {
+    height: 68vh !important;
+  }
+}

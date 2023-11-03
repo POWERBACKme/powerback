@@ -1,0 +1,38 @@
+.change-password form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.change-password form label.form-label,
+.change-password.spinner-border {
+  margin-bottom: 0;
+  color: #c9f;
+}
+.password-changed {
+  color: #fc9;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  .change-password .row:first-child {
+    margin-top: 0.25rem !important;
+    margin-bottom: -0.5rem !important;
+  }
+  .change-password.spinner-border {
+    height: calc(3.5vw + 3.5vh);
+    width: calc(3.5vw + 3.5vh);
+  }
+  .password-changed {
+    font-size: 1em;
+  }
+}
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  .change-password.spinner-border {
+    height: calc(1.75vw + 1.75vh);
+    width: calc(1.75vw + 1.75vh);
+  }
+  .password-changed {
+    font-size: 1.5em;
+  }
+}

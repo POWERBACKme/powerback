@@ -1,0 +1,41 @@
+.tab-flow {
+  font-family: 'Inconsolata';
+}
+.tab-flow .nav-link {
+  background: none;
+  color: #c9f;
+  text-decoration: underline;
+}
+.tab-flow .nav-link.active {
+  font-family: 'Inter';
+  background: #c9f;
+  color: #1b1b1b;
+  font-weight: 700;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  text-decoration: none;
+  cursor: default;
+}
+.tab-flow .nav-link.disabled {
+  text-decoration: none;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  .tab-flow {
+    font-size: 0.75rem;
+  }
+}
+  
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  .tab-flow .nav-link {
+    margin-top: 4px;
+    margin-bottom: -4px;
+    font-size: 0.85rem;
+  }
+  .flex-row.tab-flow.nav.nav-pills {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

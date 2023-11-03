@@ -1,0 +1,25 @@
+.updated-ok-alert {
+  position: fixed !important;
+  color: #6a2a83 !important;
+  background-color: #ccc;
+  font-family: 'Inter';
+  z-index: 3000;
+  text-align: start;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  .updated-ok-alert {
+    top: 28vh;
+    width: 90vw;
+    left: 5%;
+  }
+}
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  .updated-ok-alert {
+    top: 40vh;
+    left: 32vw;
+    width: 35vw;
+  }
+}

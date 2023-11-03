@@ -1,0 +1,73 @@
+.donation-filter-switch.form-check.form-switch input.form-check-input {
+  background-color: #f9c;
+  border: 1px solid #fc9;
+  cursor: pointer;
+}
+.donation-filter-switch.form-check.form-switch
+  input.form-check-input:checked {
+  background-color: #9bad97 !important;
+  border: none !important;
+  box-shadow: inset 0 0 5px #cf9 !important;
+}
+i.bi.bi-question-circle.settings-tooltip {
+  color: #ccc;
+}
+.modal-header-delete {
+  background-color: #df4759;
+}
+form#delete-modal-input .row,
+form#delete-modal-input p {
+  color: #ffc107;
+  font-family: 'Inter';
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  .preferences {
+    height: 30vh;
+  }
+  .donation-filter-switch.form-check.form-switch input.form-check-input {
+    font-size: 1.75em;
+  }
+  .settings-pane label.form-check-label {
+    margin-top: calc(-5vw + 4vh) !important;
+  }
+  .reset-default {
+    margin-top: 1.6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .reset-default-btn {
+    position: absolute;
+    text-align: center;
+    right: 6vw;
+    border-radius: 30%;
+    margin-top: -1vh;
+    margin-bottom: 1em;
+    border-width: 2px;
+    padding-top: 3vw;
+    padding-right: 1.5vw;
+    padding-bottom: 3vw;
+    padding-left: 1.5vw;
+  }
+}  
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  .settings-pane,
+  .settings-pane label.form-check-label {
+    font-size: 1.75vmin !important;
+  }
+  .settings-pane label.form-check-label {
+    margin-top: 0.6vh;
+  }
+  .donation-filter-switch.form-check.form-switch input.form-check-input {
+    font-size: 2vmin !important;
+  }
+  .donation-filter-switch.form-check.form-switch input.form-check-input {
+    font-size: 2vmin !important;
+  }
+  .defaults-btn {
+    margin-top: 2vh;
+  }
+}

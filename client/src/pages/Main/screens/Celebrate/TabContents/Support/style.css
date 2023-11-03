@@ -1,0 +1,161 @@
+.success-message {
+  text-align: left;
+}
+.success-message .card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.success-message span {
+  color: #75e6c8;
+}
+.success-message a {
+  color: #6da7f9 !important;
+}
+.success-message button {
+  color: #9cf !important;
+}
+.success-message button:hover {
+  background-color: #1c1c1c !important;
+  border-color: #6da7f9 !important;
+}
+.success-message button:active {
+  background-color: #2b2b2b !important;
+  color: #7abdf2 !important;
+}
+.success-message button:focus-visible {
+  border-color: #c9f !important;
+  background-color: #3b3a3b;
+}
+.direct-support {
+  align-items: center;
+}
+.checkout-card .bi-stars {
+  color: #ff9a5c;
+}
+.btc {
+  color: #75e6c8 !important;
+  text-align: center;
+}
+.btc-address {
+  color: #f9c;
+  cursor: copy;
+  overflow-wrap: break-word;
+}
+.btc-qr {
+  background-color: rgba(204, 204, 204, 1);
+}
+.success-message .card-footer {
+  background-color: #2e2e2e;
+}
+.reset-spinner {
+  color: #9fc;
+}
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  .success-message {
+    width: 100vw !important;
+  }
+  .support .checkout-card.card {
+    justify-content: center;
+    align-items: center;
+  }
+  .support .checkout-card {
+    min-height: 33vh !important;
+    height: calc(41vw + 37vh) !important;
+  }
+  .reset-spinner {
+    width: 28.7vh;
+    height: 28.7vh;
+  }
+  .success-message.alert {
+    margin-bottom: 1.5vh;
+  }
+  .success-message .card-header,
+  .success-message .card-body {
+    padding-bottom: 0 !important;
+    padding-top: 0.66rem;
+  }
+  .success-message span {
+    font-size: 1rem;
+  }
+  .success-message span.powerback {
+    font-size: 1.5rem;
+  }
+  .checkout-card .bi-stars {
+    font-size: 3rem;
+  }
+  .direct-support {
+    height: 49vw !important;
+    font-size: 13px;
+    line-height: 12px;
+  }
+  .direct-support p {
+    font-size: calc(2vw + 1vh) !important;
+  }
+  #patron-ask {
+    font-size: 13px;
+    font-family: 'Red Hat Text';
+    line-height: 13px;
+    padding-bottom: 1vw;
+  }
+  .btc {
+    max-width: 30%;
+    height: 34vw;
+  }
+  .btc-qr {
+    background-color: rgba(204, 204, 204, 1);
+    margin-bottom: 0;
+  }
+  .btc-address {
+    max-width: 25vw;
+  }
+  figcaption.btc-address.figure-caption {
+    font-size: 0.81em;
+  }
+}
+
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  .success-message {
+    width: 33vw;
+  }
+  .support .checkout-card.card {
+    height: 51.5vh;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .reset-spinner {
+    width: 28.7vh;
+    height: 28.7vh;
+  }
+}
+
+/* Big Screen */
+@media only screen and (min-width: 1800px) and (orientation: landscape) {
+  .success-message .card-header {
+    padding: 0;
+  }
+  .success-message .alert {
+    margin-bottom: 0;
+  }
+  .success-message span {
+    line-height: 1.6rem;
+  }
+  .success-message span.powerback {
+    font-size: 1.6rem;
+  }
+  .success-message .btn-group {
+    padding-bottom: 0;
+  }
+  .checkout-card .bi-stars {
+    font-size: 4rem;
+  }
+  .btc {
+    margin-top: -2rem; /* */
+  }
+  .btc-address {
+    width: 4.5vw;
+  }
+}

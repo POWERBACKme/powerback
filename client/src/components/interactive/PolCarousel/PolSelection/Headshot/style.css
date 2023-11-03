@@ -1,0 +1,42 @@
+.headshot-container {
+  overflow: hidden;
+  border-radius: 5px;
+}
+.headshot {
+  border-radius: 5px;
+  background-color: #9bad9750;
+  cursor: pointer;
+  filter: saturate(81%);
+  border: 1px solid #cc99ffa8;
+}
+.headshot:active {
+  transition: all 0.15s ease-in !important;
+  margin-top: -1px;
+  margin-bottom: -1px;
+}
+.headshot:hover {
+  filter: brightness(90%) contrast(106%);
+  transition: all 0.15s ease-in !important;
+}
+.pol-headshot-selected {
+  transform: scale(1) !important;
+  filter: brightness(105%) contrast(118%) !important;
+  border: 2px dashed #fc9;
+  cursor: default;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  .headshot {
+    min-width: 23vh;
+    max-width: 23vh;
+    min-height: 28vh;
+  }
+}
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  .headshot {
+    width: 24.2vh;
+    height: 29.5vh;
+  }
+}

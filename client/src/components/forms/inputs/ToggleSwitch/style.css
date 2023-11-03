@@ -1,0 +1,25 @@
+#login .form-toggle {
+  margin-top: 5px;
+}
+#login .form-switch .form-check-input {
+  width: 40px;
+  background-color: #9bad97;
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  #login .form-switch .form-check-input {
+    transform: rotate(180deg);
+  }
+  #login .select-signup {
+    color: #f9c;
+  }
+}
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  #login .form-toggle {
+    margin-top: 3.33rem;
+  }
+}

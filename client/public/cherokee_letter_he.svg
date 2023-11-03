@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.0//EN' 'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg fill-opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" color-rendering="auto" color-interpolation="auto" text-rendering="auto" stroke="black" stroke-linecap="square" stroke-miterlimit="10" shape-rendering="auto" stroke-opacity="1" fill="black" stroke-dasharray="none" font-weight="normal" stroke-width="1" xmlns="http://www.w3.org/2000/svg" font-family="&apos;Dialog&apos;" font-style="normal" stroke-linejoin="miter" font-size="12" stroke-dashoffset="0" image-rendering="auto">
+  <!--Unicode Character 'CHEROKEE LETTER HE' (U+13AE)-->
+  <defs id="genericDefs" />
+  <g>
+    <g>
+      <path d="M40.5 365.625 L40.5 358.3125 L64.125 351 L64.125 245.25 L40.5 237.9375 L40.5 230.625 L114.75 230.625 L114.75 237.9375 L91.125 245.25 L91.125 299.8125 Q104.0625 295.875 113.9062 288.2812 Q123.75 280.6875 128.5312 268.3125 Q133.3125 255.9375 133.3125 240.1875 Q133.3125 223.875 126.8438 210.9375 Q120.375 198 108.5625 190.6875 Q96.75 183.375 82.6875 183.375 Q70.875 183.375 58.2188 187.5938 Q45.5625 191.8125 36 201.375 Q26.4375 210.9375 18.5625 225.5625 Q15.75 225.5625 13.5 224.1562 Q11.25 222.75 11.25 218.8125 Q15.1875 205.3125 26.7188 192.0938 Q38.25 178.875 54.2812 173.8125 Q70.3125 168.75 82.6875 168.75 Q101.25 168.75 118.6875 175.7812 Q136.125 182.8125 148.2188 198.5625 Q160.3125 214.3125 160.3125 240.1875 Q160.3125 260.4375 149.0625 277.875 Q137.8125 295.3125 122.9062 303.1875 Q108 311.0625 91.125 314.4375 L91.125 351 L114.75 358.3125 L114.75 365.625 L40.5 365.625 Z" stroke="none" />
+    </g>
+  </g>
+</svg>

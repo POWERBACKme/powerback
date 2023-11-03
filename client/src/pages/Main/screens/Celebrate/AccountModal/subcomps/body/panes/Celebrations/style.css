@@ -1,0 +1,62 @@
+.stop-scroll {
+  overflow-y: hidden !important;
+}
+.timeline-bg {
+  background: #252522;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border-top-left-radius: 12%;
+  border-bottom-right-radius: 2%;
+  border-top: 1px solid #1e1e1e;
+  border-right: 1px solid #222222;
+  border-left: 1px solid #222222 !important;
+  box-shadow: 0 0 2vh #333;
+  touch-action: pan-y;
+}
+.viewed-celebrations-total {
+  color: #20cf9d;
+  font-family: 'Inter';
+  text-align: center;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  .celebrations-modal-subpane {
+    overflow-x: hidden !important;
+  }
+  .timeline-bg {
+    width: 105%;
+    min-height: 55vh;
+    max-height: 55vh;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  .vertical-timeline-element-content.bounce-in {
+    height: calc(25vw + 12vh) !important;
+  }
+  .placeholder-glow.vertical-timeline-element
+    .vertical-timeline-element-content.bounce-in {
+    height: calc(25vw + 12vh);
+  }
+  span.vertical-timeline-element-date .row .col-auto {
+    font-size: calc(3vh - 2vw) !important;
+  }
+  .vertical-timeline.vertical-timeline--animate.vertical-timeline--one-column-right:last-child {
+    margin-bottom: 2rem;
+  }
+}
+/* Desktop */
+@media only screen and (min-width: 1200px) {
+  .timeline-bg {
+    width: 96.33%;
+    max-height: 38vh;
+  }
+  .viewed-celebrations-total {
+    margin-bottom: -2vh !important;
+  }
+  .vertical-timeline-element-content.bounce-in {
+    min-height: 21vh;
+    height: 21vh;
+  }
+}

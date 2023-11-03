@@ -1,0 +1,40 @@
+#terms-modal span.display-6 {
+  font-family: 'Inter';
+}
+#terms-modal div.modal-body {
+  background: #2a2b27;
+  overflow-y: hidden;
+  color: #ccc;
+  font-family: 'Red Hat Text';
+  line-height: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 2.25rem;
+  white-space: pre-line !important;
+}
+#terms-modal div.modal-body ol {
+  list-style: decimal;
+}
+#terms-modal .nav-link {
+  color: #c9f;
+}
+#terms-modal .nav-link.active {
+  background-color: #c9f;
+  color: #2a2b27;
+}
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  #terms-modal div.modal-body {
+    height: calc(58vw + 47vh);
+    max-height: 90vh;
+    /* max-height: 127vw; */
+    overflow-y: scroll;
+  }
+}
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  #terms-modal div.modal-body {
+    max-height: 50vh !important;
+    overflow-y: scroll;
+  }
+}

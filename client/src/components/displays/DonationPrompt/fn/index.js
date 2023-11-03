@@ -1,0 +1,1 @@
+export { handleDescription } from './description';

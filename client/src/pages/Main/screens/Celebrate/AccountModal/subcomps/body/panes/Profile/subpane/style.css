@@ -1,0 +1,14 @@
+/*** SCREEN SIZES ***/
+/* Mobile, portrait */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+  #account-modal .form-and-fields {
+    min-height: 85vw;
+  }
+}
+  
+/* Tablet, landscape */
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  .compliance {
+    min-height: 3vh;
+  }
+}

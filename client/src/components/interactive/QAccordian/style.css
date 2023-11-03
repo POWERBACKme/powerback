@@ -1,0 +1,35 @@
+/* FAQ */
+#faq-modal button.accordion-button.collapsed {
+  color: #fc9;
+
+  font-family: 'Red Hat Text';
+}
+#faq-modal button.accordion-button::after {
+  background-image: var(--bs-accordion-btn-active-icon);
+  filter: brightness(0) saturate(100%) invert(91%) sepia(19%)
+    saturate(812%) hue-rotate(37deg) brightness(102%) contrast(104%);
+}
+#faq-modal button.accordion-button.collapsed::after {
+  background-image: var(--bs-accordion-btn-icon);
+  filter: brightness(0) saturate(100%) invert(60%) sepia(98%)
+    saturate(906%) hue-rotate(211deg) brightness(101%) contrast(102%);
+}
+#faq-modal button.accordion-button {
+  color: #cf9;
+  background-color: #2a2b27 !important;
+
+  font-family: 'Red Hat Text';
+}
+#faq-modal .accordion-button:not(.collapsed) {
+  box-shadow: none;
+}
+#faq-modal .accordion-item {
+  background-color: #1b1b1b;
+  border-bottom: 1px #f9c solid !important;
+}
+#faq-modal .accordion-header .accordion-button.collapsed {
+  border: transparent !important;
+}
+#faq-modal .accordion-header .accordion-button {
+  border-bottom: 1px #f9c solid !important;
+}

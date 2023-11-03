@@ -1,0 +1,13 @@
+.agree-btn {
+  font-family: 'Red Hat Text';
+  filter: invert(11%) sepia(52%) saturate(201%) hue-rotate(101deg)
+    brightness(102%) contrast(102%);
+  margin-left: 33% !important;
+  margin-right: 33% !important;
+}
+.agree-btn:active {
+  border: inset 1px #0dcaf088 !important;
+  filter: invert(11%) sepia(52%) saturate(201%) hue-rotate(101deg)
+    brightness(107%) contrast(102%) !important;
+  box-shadow: inset 0px 0px 0px 2px #1c1c1c;
+}
