@@ -9344,33 +9344,6 @@ const allPols = [
     ]
 },
 {
-    id: "S001222",
-    member_id: "S001222",
-    first_name: "George",
-    middle_name: null,
-    last_name: "Santos",
-    twitter_account: null,
-    roles: [ 
-        {
-            congress: "118",
-            chamber: "House",
-            title: "Representative",
-            short_title: "Rep.",
-            state: "NY",
-            fec_candidate_id: "H0NY03083",
-            district: "3",
-            ocd_id: "ocd-division/country:us/state:ny/cd:3",
-            start_date: "2023-01-03",
-            end_date: "2025-01-03",
-            next_election: "2024",
-            state_rank: "",
-            missed_votes_pct: 0,
-            votes_with_party_pct: 83.24,
-            votes_against_party_pct: 8.38
-        }
-    ]
-},
-{
     id: "S001168",
     member_id: "S001168",
     first_name: "John",
@@ -10420,6 +10393,33 @@ const allPols = [
             missed_votes_pct: 0,
             votes_with_party_pct: 89.39,
             votes_against_party_pct: 2.23
+        }
+    ]
+},
+{
+    id: "S001201",
+    member_id: "S001201",
+    first_name: "Thomas",
+    middle_name: null,
+    last_name: "Suozzi",
+    twitter_account: "RepTomSuozzi",
+    roles: [ 
+        {
+            congress: "118",
+            chamber: "House",
+            title: "Representative",
+            short_title: "Rep.",
+            state: "NY",
+            fec_candidate_id: "H6NY03247",
+            district: "3",
+            ocd_id: "ocd-division/country:us/state:ny/cd:3",
+            start_date: "2024-02-28",
+            end_date: "2025-01-03",
+            next_election: "2024",
+            state_rank: "",
+            missed_votes_pct: 25.00,
+            votes_with_party_pct: 100.00,
+            votes_against_party_pct: 0.00
         }
     ]
 },
