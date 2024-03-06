@@ -5,7 +5,7 @@ module.exports = [
     questions: [
       {
         q: 'What is POWERBACK?',
-        a: 'POWERBACK is an election campaign donation service with a fresh approach for small-dollar donors, inspired by the 2021 #ForceTheVote movement. This movement encouraged House members to demand a vote on Medicare For All. In the spirit of commitment, accountability, and healthcare as a human right, POWERBACK carries this concept into the fundraising world. We harness contributions from everyday people to celebrate politicians that honor your values.',
+        a: 'POWERBACK is an election campaign donation service with a fresh approach for small-dollar donors, inspired by the 2021 #ForceTheVote movement. This movement encouraged House members to demand a vote on Medicare For All. In the spirit of commitment, accountability, and healthcare as a human right, POWERBACK carries this concept into the political fundraising world.',
         key: 1,
       },
       {
@@ -15,8 +15,13 @@ module.exports = [
       },
       {
         q: 'How does POWERBACK work?',
-        a: "It's simple. Use our search options to find Representatives who matter to you. Select who you'd like to make a Celebration with to honor your campaign donation when Medicare For All is brought to the House floor for a vote. Then choose your Celebration amount and proceed with payment. For amounts exceeding $200 in a single campaign cycle, we ensure proper filing with the FEC, and this service is offered to you free of charge. Your voice matters.",
+        a: "It's simple. We harness contributions from everyday people to celebrate politicians that honor your values. Use our search options to find Representatives who matter to you. Then choose your Celebration amount and proceed with payment. For amounts exceeding $200 in a single campaign cycle, we ensure proper filing with the FEC, and this service is offered to you free of charge.",
         key: 3,
+      },
+      {
+        q: 'Does POWERBACK cover other bills, the Senate, or local elections?',
+        a: 'Currently, we focus only on the cause of Medicare For All. However, with your support, we plan to expand our reach to other vital issues and elections in the near future. Your support can help us make a broader impact.',
+        key: 4,
       },
     ],
   },
@@ -31,19 +36,20 @@ module.exports = [
       },
       {
         q: 'What does POWERBACK charge?',
-        a: '2.9% plus 30 cents per Celebration for our payment processing service, Stripe. Other services may charge a 3.95% flat fee, which is cheaper by a difference of cents for donations up until around $29, after which we start saving you money. Our goal is to ensure your support is impactful, while we keep the lights on.',
+        a: '2.9% plus 30 cents per Celebration for our payment processing service, Stripe. Other services may charge a 3.95% flat fee, which is cheaper by a difference of mere cents for donations up until around $29, after which we start saving you money. Our goal is to ensure your support is impactful, while we keep the lights on.',
         key: 2,
+      },
+      {
+        q: 'What is a Cosponsor?',
+        a: 'A Cosponsor is an elected representative who has pledged their name in support for a Bill i.e. piece of legislation. There are no rules in Congress for who may cosponsor what, but cosponsorships typically follow party lines.',
+        key: 3,
       },
       {
         q: 'Can I give to challengers or only incumbents?',
         a: 'Our strategy is to bolster whomever holds office now to start representing you today. In this sense, POWERBACK may encourage incumbency as a side effect, but only to the degree incumbents serve the people during their terms. Failure here may prove to be a benefit for savvy challengers.',
-        key: 3,
-      },
-      {
-        q: 'Does POWERBACK cover other bills, the Senate, or local elections?',
-        a: 'Currently, we focus only on the cause of Medicare For All. However, with your support, we plan to expand our reach to other vital issues and elections in the near future. Your support can help us make a broader impact.',
         key: 4,
-      },
+      }
+
     ],
   },
   {
@@ -56,13 +62,13 @@ module.exports = [
         key: 1,
       },
       {
-        q: 'What is a Cosponsor?',
-        a: 'A Cosponsor is an elected representative who has pledged their name in support for a Bill i.e. piece of legislation. There are no rules in Congress for who may cosponsor what, but cosponsorships typically follow party lines.',
+        q: 'What if a vote on Medicare For All never happens? Can I get a refund?',
+        a: 'We\'re working to expand our service beyond this single yet extremely important issue. If we fail to do so by the end of this (118th) legislative session, we may refund your Celebrations. Once we roll out our full service, however, you\'ll be able to freely reroute any of your unrealized Celebration expenditures to new Bills and Representatives that you choose.',
         key: 2,
       },
       {
         q: 'Does POWERBACK have any party or corporate affiliation?',
-        a: "No, we're independent. POWERBACK is committed to neutrality and serving the interests of the people, free from any party or corporate affiliation. For example, we always display politicians in a random sequence to prevent favoritism.",
+        a: "No, we're independent. POWERBACK is committed to neutrality and serving the interests of the people, free from any party or corporate affiliation. For example, we always display politicians in a random sequence to prevent favoritism, and we never mention their .",
         key: 3,
       },
       {
