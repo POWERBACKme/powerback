@@ -37,6 +37,7 @@ const Reset = ({
   handleChange,
   uFeedback,
   showErr,
+  badResetRedirect,
   ...props
 }: Props & ResetProps) => {
   const [idempotentKey, setIdempotentKey] = useReducer(() => {
@@ -58,11 +59,17 @@ const Reset = ({
           );
         } catch (err) {
           console.error(err);
+          (badResetRedirect as () => void)();
         }
       }
     };
     handlePasswordReset();
-  }, [idempotentKey, setLinkIsExpired, setUserIsAssumedValid]);
+  }, [
+    idempotentKey,
+    setLinkIsExpired,
+    badResetRedirect,
+    setUserIsAssumedValid,
+  ]);
 
   const handleSubmit = useCallback(
     (e: any) =>
