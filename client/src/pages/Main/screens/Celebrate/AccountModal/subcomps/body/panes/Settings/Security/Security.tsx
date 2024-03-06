@@ -32,6 +32,12 @@ const Security = ({
         {/* CHANGE PASSWORD, DELETE ACCOUNT */}
         {SECURITY_BUTTONS.map((btn) => (
           <ContinueBtn
+            ariaPressed={
+              (securityTheater as SecurityTheater)[
+                (btn.substring(0, 1).toLowerCase() +
+                  btn.slice(1).replace(' ', '')) as keyof SecurityTheater
+              ]
+            }
             classProp={
               ((securityTheater as SecurityTheater)[
                 (btn.substring(0, 1).toLowerCase() +

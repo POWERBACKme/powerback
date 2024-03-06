@@ -12,6 +12,20 @@ const Sort = ({ isMobile, filterEvents }: Props) => {
     TOGGLE_BTNS = useMemo(() => {
       return [
         {
+          name: 'sort-mode',
+          btns: [
+            { icon: 'calendar3', value: 'date', dispatch: 'DATE' },
+            {
+              icon: 'currency-dollar',
+              value: 'amount',
+              dispatch: 'AMOUNT',
+            },
+          ],
+          controlId: 'sortModeBtn',
+          togglePosition: toggleTypeBtn,
+          ariaLabel: 'sort donation mode toggle button group',
+        },
+        {
           name: 'sort-reverse',
           btns: [
             {
@@ -29,25 +43,11 @@ const Sort = ({ isMobile, filterEvents }: Props) => {
           togglePosition: toggleDirectionBtn,
           ariaLabel: 'sort donation order toggle button group',
         },
-        {
-          name: 'sort-mode',
-          btns: [
-            { icon: 'calendar3', value: 'date', dispatch: 'DATE' },
-            {
-              icon: 'currency-dollar',
-              value: 'amount',
-              dispatch: 'AMOUNT',
-            },
-          ],
-          controlId: 'sortModeBtn',
-          togglePosition: toggleTypeBtn,
-          ariaLabel: 'sort donation mode toggle button group',
-        },
       ];
     }, [toggleTypeBtn, toggleDirectionBtn]);
 
   const handleChange = useCallback(
-    (e: ChangeEvent, type: string) => {
+    (e: ChangeEvent | KeyboardEvent, type: string) => {
       let { value } = e.target as any;
       if (type === 'REVERSE')
         setToggleDirectionBtn((btn) =>
@@ -62,7 +62,11 @@ const Sort = ({ isMobile, filterEvents }: Props) => {
 
   return (
     <>
-      <Form.Label className='indent'>SORT BY</Form.Label>
+      <Form.Label className='indent'>
+        {'SORT BY ' +
+          toggleTypeBtn +
+          (isMobile ? '' : ', ' + toggleDirectionBtn)}
+      </Form.Label>
       <Form.Group className='text-center'>
         <Stack
           className={'donation-subpane-filter-btns'}

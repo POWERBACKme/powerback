@@ -1,13 +1,13 @@
 import React, {
   useMemo,
   Dispatch,
+  useState,
   useCallback,
   ChangeEvent,
-  useTransition,
   SetStateAction,
+  useDeferredValue,
   ChangeEventHandler,
 } from 'react';
-import { FormCheckProps } from 'react-bootstrap/esm/FormCheck';
 import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
 import Tab from 'react-bootstrap/esm/Tab';
@@ -32,67 +32,46 @@ const SettingsPane = ({
   user,
   ...props
 }: Props) => {
+  // debounce prevents infinite loop caused by overclicking
+  const deferredSettings = useDeferredValue(settings);
+
   const settingsAreDefault = useMemo(() => {
-    return Object.keys(settings as Settings).every(
+    return Object.keys(deferredSettings as Settings).every(
       (key) =>
         Object.keys(initSettings).includes(key as string) &&
-        (settings as Settings)[key as keyof Settings] ===
+        (deferredSettings as Settings)[key as keyof Settings] ===
           initSettings[key as keyof Settings]
     );
-  }, [settings]);
+  }, [deferredSettings]);
 
   const handleClickRestoreDefaultSettings = useCallback(() => {
     if (settingsAreDefault) return;
-    else {
-      (setSettings as Dispatch<SetStateAction<Settings>>)(initSettings);
-      (handleUpdateUser as any)(user, { settings: initSettings });
-    }
-  }, [settingsAreDefault, handleUpdateUser, setSettings, user]);
+    else (setSettings as Dispatch<SetStateAction<Settings>>)(initSettings);
+  }, [settingsAreDefault, setSettings]);
 
-  const [isSwitching, startSwitch] = useTransition();
-
-  const handleSettingsToggleSwitch = useCallback<
-    ChangeEventHandler<HTMLInputElement>
-  >(
+  const handleSettingsToggleSwitch = useCallback<ChangeEventHandler>(
     (e: ChangeEvent) => {
-      if (isSwitching) {
-        return;
-      } else
-        startSwitch(() => {
-          const target: HTMLElement | null = (
-              e.target.parentElement as HTMLElement
-            ).parentElement,
-            trimLength = (target as HTMLElement).id.length - 13,
-            switchId = (target as HTMLElement).id.substring(0, trimLength),
-            elementArray = Array.from(
-              ((target as HTMLElement).parentElement as HTMLElement)
-                .children as unknown as HTMLElement[]
-            );
+      const target: HTMLElement | null = (
+          e.target.parentElement as HTMLElement
+        ).parentElement,
+        trimLength = (target as HTMLElement).id.length - 13,
+        switchId = (target as HTMLElement).id.substring(0, trimLength);
 
-          const isChecked = (idx: number) =>
-            (
-              (
-                (elementArray[idx] as HTMLElement)
-                  .firstChild as HTMLElement
-              ).children[0] as FormCheckProps
-            ).checked as boolean;
-
-          (setSettings as Dispatch<SetStateAction<Settings>>)(
-            (s) => ({ ...s, [switchId]: !s[switchId as keyof Settings] })
-            // reads the switch positions directly from the DOM
-          );
-          (handleUpdateUser as any)(user, {
-            settings: {
-              autoTweet: isChecked(1),
-              showToolTips: isChecked(2),
-              showLoginLogout: isChecked(3),
-              emailReceipts: isChecked(0) as boolean,
-            } as Settings,
-          });
-        });
+      (setSettings as Dispatch<SetStateAction<Settings>>)((s) => ({
+        ...s,
+        [switchId]: !s[switchId as keyof Settings],
+      }));
     },
-    [user, setSettings, isSwitching, handleUpdateUser]
+    [setSettings]
   );
+
+  const [prevSettings, setPrevSettings] = useState(settings);
+  if (prevSettings !== deferredSettings) {
+    setPrevSettings(deferredSettings);
+    (handleUpdateUser as any)(user, {
+      settings: deferredSettings as Settings,
+    });
+  }
 
   return (
     <Tab.Pane
@@ -104,8 +83,8 @@ const SettingsPane = ({
           <Preferences
             handleClick={handleClickRestoreDefaultSettings}
             handleSwitch={handleSettingsToggleSwitch}
+            settings={deferredSettings as Settings}
             settingsAreDefault={settingsAreDefault}
-            settings={settings as Settings}
             {...props}
           />
         </Col>
@@ -113,8 +92,8 @@ const SettingsPane = ({
           <Security
             handleDeleteUser={handleDeleteUser}
             handleUpdateUser={handleUpdateUser}
+            settings={deferredSettings}
             setSettings={setSettings}
-            settings={settings}
             user={user}
             {...props}
           />

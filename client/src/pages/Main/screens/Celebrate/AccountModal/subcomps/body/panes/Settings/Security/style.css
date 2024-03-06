@@ -7,7 +7,8 @@
 button.option-btn-active.button--continue.btn {
   color: #9fc !important;
   border-color: #f9c !important;
-  border-width: 2px;
+  border-width: 2px !important;
+  border-style: solid !important;
   margin-bottom: 0px;
   text-decoration: none !important;
   box-shadow: 0 0 0 0;

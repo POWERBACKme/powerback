@@ -1,8 +1,8 @@
-import React, { ChangeEvent, useCallback } from 'react';
+import React, { ChangeEvent } from 'react';
 import ToggleButtonGroup from 'react-bootstrap/esm/ToggleButtonGroup';
 import ToggleButton from 'react-bootstrap/esm/ToggleButton';
+import { handleKeyDown, simulateMouseClick } from '@Utils';
 import FormGroup from 'react-bootstrap/esm/FormGroup';
-import { handleKeyDown } from '@Utils';
 
 type Btn = {
   dispatch: string;
@@ -29,24 +29,15 @@ const SwitchButtons = ({
   handleChange,
   togglePosition,
 }: Props) => {
-  const handleToggleBtnCursor = useCallback(
-    (i: number) => {
-      if (togglePosition === btns[i].value) {
-        return 'default';
-      } else return 'pointer';
-    },
-    [btns, togglePosition]
-  );
-
   return (
     <FormGroup controlId={controlId}>
       <ToggleButtonGroup
-        name={name}
-        size={size}
-        vertical={false}
-        className={'mt-1'}
+        defaultValue={togglePosition}
         aria-label={ariaLabel}
-        defaultValue={togglePosition}>
+        className={'mt-1'}
+        vertical={false}
+        name={name}
+        size={size}>
         {btns.map((b, i) => (
           <ToggleButton
             name={'radio'}
@@ -55,8 +46,14 @@ const SwitchButtons = ({
             id={`sort-btn-${b.value}`}
             checked={togglePosition === b.value}
             onChange={(e) => handleChange(e, b.dispatch)}
-            onKeyDown={(e) => handleKeyDown(e, handleChange as () => void)}
-            style={{ cursor: handleToggleBtnCursor(i), width: '80px' }}>
+            onKeyDown={(e) => {
+              if (togglePosition !== b.value)
+                handleKeyDown(
+                  e,
+                  simulateMouseClick as unknown as () => void,
+                  e.target
+                );
+            }}>
             {b.icon ? <i className={`bi bi-${b.icon}`} /> : b.value}
           </ToggleButton>
         ))}

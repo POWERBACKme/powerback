@@ -1,8 +1,7 @@
-let tooltip = {
+const tooltip = {
   infoPlacement: 'auto',
   icon: 'question-circle settings-tooltip',
-};
-const CUSTOM_SETTINGS = [
+}, CUSTOM_SETTINGS = [
   {
     cls: 'my-2 mt-lg-3',
     label: 'Email me celebration receipts',

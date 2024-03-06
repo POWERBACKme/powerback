@@ -6,3 +6,12 @@
     margin-left: -1vw;
   }
 }
+/* Desktop */
+@media only screen and (min-width: 1200px) {
+  .button--continue:active {
+    border-top-style: inset !important;
+    border-right-style: inset !important;
+    border-bottom-style: inset !important;
+    border-left-style: inset !important;
+  }
+}

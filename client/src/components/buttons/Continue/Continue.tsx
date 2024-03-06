@@ -1,4 +1,4 @@
-import React, { KeyboardEventHandler, MouseEventHandler } from 'react';
+import React, { MouseEventHandler } from 'react';
 import { ButtonVariant } from 'react-bootstrap/esm/types';
 import Button from 'react-bootstrap/esm/Button';
 import { UserEvent } from 'types';
@@ -10,6 +10,7 @@ type Props = {
   classProp?: string | undefined;
   size?: 'sm' | 'lg' | undefined;
   variant?: ButtonVariant;
+  ariaPressed?: boolean;
   disabled?: boolean;
   isMobile?: boolean;
   hidden?: boolean;
@@ -25,6 +26,7 @@ const ContinueBtn = ({
   isMobile,
   disabled,
   classProp = 'button--continue',
+  ariaPressed,
   handleClick,
 }: Props) => (
   <Button
@@ -34,12 +36,10 @@ const ContinueBtn = ({
     disabled={disabled}
     className={classProp}
     hidden={hidden ?? false}
+    aria-pressed={ariaPressed}
     size={size ? size : isMobile ? 'sm' : 'lg'}
     onClick={
       handleClick as unknown as MouseEventHandler<HTMLButtonElement>
-    }
-    onKeyDown={
-      handleClick as unknown as KeyboardEventHandler<HTMLButtonElement>
     }>
     {label}
   </Button>

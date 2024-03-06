@@ -14,8 +14,8 @@ import { ContinueBtn } from '@Components/buttons';
 import './style.css';
 
 type Props = {
-  handleSwitch: ChangeEventHandler<HTMLInputElement>;
-  handleClick: MouseEventHandler<HTMLButtonElement>;
+  handleSwitch: ChangeEventHandler;
+  handleClick: MouseEventHandler;
   settingsAreDefault: boolean;
   settings: Settings;
   isMobile: boolean;
@@ -50,8 +50,14 @@ const Preferences = ({
                     id={setting.tooltip.toolTipId + '-switch-group'}
                     key={setting.tooltip.toolTipId + '-switch-group'}>
                     <Form.Switch
+                      tabIndex={0}
                       className={
                         setting.cls + ' mx-lg-2 donation-filter-switch'
+                      }
+                      aria-pressed={
+                        settings[
+                          setting.tooltip.toolTipId as keyof Settings
+                        ]
                       }
                       checked={
                         settings[
@@ -61,6 +67,28 @@ const Preferences = ({
                       onChange={handleSwitch}
                       {...setting}
                     />
+                     {/* <Button
+                      tabIndex={0}
+                      className={
+                        setting.cls + ' mx-lg-2 donation-filter-switch'
+                      }
+                      aria-checked={
+                        settings[
+                          setting.tooltip.toolTipId as keyof Settings
+                        ]
+                      }
+                      role={'switch'}
+                      // checked={
+                      //   settings[
+                      //     setting.tooltip.toolTipId as keyof Settings
+                      //   ]
+                      // }
+                      onClick={handleSwitch}
+                      {...setting}>
+                      {' '}
+                      <span>off</span>
+                      <span>on</span>
+                    </Button> */}
                     {isMobile && <>&nbsp;</>}
                     <InfoTooltip
                       showToolTips={settings.showToolTips}

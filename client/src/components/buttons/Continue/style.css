@@ -22,9 +22,8 @@
   }
   .button--continue:active {
     color: #a9c9a2 !important;
-    border-top: 2px inset #73578f80 !important;
-    border-right: 2px inset #73578f80 !important;
-    border-bottom: 1px inset #73578f80 !important;
-    border-left: 1px inset #73578f80 !important;
-  }
+    border-top: 2px #73578f80 !important;
+    border-right: 2px #73578f80 !important;
+    border-bottom: 1px #73578f80 !important;
+    border-left: 1px #73578f80 !important;  }
 }

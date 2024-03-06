@@ -36,6 +36,9 @@ img.receipt-mark {
 }
 /* Tablet, landscape */
 @media only screen and (min-width: 900px) and (orientation: landscape) {
+  .vertical-timeline-element-content.bounce-in {
+    max-width: 28vw;
+  }
   img.receipt-mark {
     left: 80%;
     top: 79%;

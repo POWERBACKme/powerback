@@ -34,6 +34,7 @@ const Input = ({ filterEvents, textInputRef, ...props }: Props) => {
           key={f.name + '-input-filter'}
           filterEvents={filterEvents}
           textInputRef={textInputRef}
+          autoComplete={'off'}
           name={f.name}
           text={f.text}
           cls={f.cls}

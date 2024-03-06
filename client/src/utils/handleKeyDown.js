@@ -1,4 +1,4 @@
-export const handleKeyDown = (e, cb = () => {}, arg) => {
+export const handleKeyDown = (e, cb = () => { }, arg) => {
   if (
     !(
       e.type === 'click' ||
