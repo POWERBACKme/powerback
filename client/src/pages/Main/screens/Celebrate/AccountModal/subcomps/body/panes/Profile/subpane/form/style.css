@@ -93,12 +93,14 @@ label.btn.btn-primary:active {
     width: 20vw;
   }
 }
-
 /* Tablet, landscape */
 @media only screen and (min-width: 900px) and (orientation: landscape) {
   #account-modal .profile-form-ask {
     height: 5vh;
-    line-height: 1.25rem;
+    font-size: 0.95rem;
+    line-height: 1.425rem;
+    margin-top: -0.33rem;
+    margin-bottom: 1.83rem;
   }
   form.profile-form {
     height: 25vh;

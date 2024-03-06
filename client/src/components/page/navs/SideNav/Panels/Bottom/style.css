@@ -5,3 +5,6 @@
   margin-left: -2vw;
   color: #cf9;
 }
+a.nav-link {
+  display: flex;
+}

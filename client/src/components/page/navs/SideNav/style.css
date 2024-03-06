@@ -4,6 +4,9 @@
 .offcanvas-body {
   overflow-y: clip !important;
 }
+.offcanvas a.nav-link {
+  display: flex;
+}
 .offcanvas a {
   color: #6da7f9;
 }
@@ -53,7 +56,6 @@
     justify-content: center;
   }
 }
-  
 /* Tablet, landscape */
 @media only screen and (min-width: 900px) and (orientation: landscape) {
   .offcanvas {

@@ -4,7 +4,7 @@ import './style.css';
 
 const Loading = () => (
   <Col className='loading-headshots'>
-    <h2 className='placeholder-wave'>Reticulating Shills...</h2>
+    <h2 className='placeholder-wave'>Reticulating Spines...</h2>
   </Col>
 );
 

@@ -86,6 +86,9 @@ input.form-check-input:checked {
   background-color: #f9c !important;
   border: 1px solid #fc9 !important;
 }
+input.btn-check:checked + .btn {
+  cursor: default !important;
+}
 .input-group-text {
   color: #ccc;
   background-color: #99cc9927;
@@ -94,6 +97,17 @@ input.form-check-input:checked {
 span.nav-link {
   cursor: pointer !important;
 }
+.nav-links .nav-link {
+  padding-top: 0.0625rem !important;
+  padding-bottom: 0.0625rem !important;
+}
+.nav-link:focus-visible {
+  box-shadow: 0 0 0 0.25rem #ffcc9940 !important;
+}
+.btn:is(:focus-visible):not(:checked + .btn) {
+  background-color: #c9f !important;
+}
+
 /* #test-mode {
   display: none;
   position: fixed;

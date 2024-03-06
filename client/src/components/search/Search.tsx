@@ -45,6 +45,7 @@ const Search = ({
       <Col>
         <PolCombobox
           handleCosponsors={handleCosponsors}
+          showCosponsors={showCosponsors}
           isDesktop={isDesktop}
           isMobile={isMobile}
           {...props}

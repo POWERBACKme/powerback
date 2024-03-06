@@ -225,8 +225,8 @@ const App = () => {
     setPrevDonation(donation);
     if (
       tabKey === 'support' &&
-      donation === 0 &&
       !paymentProcessed &&
+      donation === 0 &&
       !appRefresh
     )
       stageNewProcess();
@@ -557,8 +557,7 @@ const App = () => {
 
   useEffect(() => {
     activateAccount();
-    badResetRedirect();
-  }, [activateAccount, badResetRedirect]);
+  }, [activateAccount]);
 
   const [
     loggingIn,
@@ -568,46 +567,46 @@ const App = () => {
   // no bad state
   const setters = useMemo(() => {
       return {
-        login,
-        signup,
-        formPath,
-        userData,
-        setTabKey,
-        loggingIn,
-        setDonation,
-        setLoggedIn,
-        setSettings,
-        swapToError,
-        setUserData,
-        setShowAlert,
-        setShowModal,
-        swapToButton,
-        userEntryForm,
-        resetFormPath,
-        setSelectedPol,
-        setShowOverlay,
-        setShowSideNav,
-        setCheckedTerms,
-        setUserEntryForm,
+        startLoggingInSpinner,
+        setUserFormValidated,
+        stopLoggingInSpinner,
         sessionStorageNames,
         setAccountActivated,
         switchToErrorScreen,
-        setUserFormValidated,
-        stopLoggingInSpinner,
-        startLoggingInSpinner,
+        setUserEntryForm,
+        setCheckedTerms,
+        setSelectedPol,
+        setShowOverlay,
+        setShowSideNav,
+        resetFormPath,
+        userEntryForm,
+        setShowAlert,
+        setShowModal,
+        swapToButton,
+        setDonation,
+        setLoggedIn,
+        setSettings,
+        setUserData,
+        swapToError,
+        loggingIn,
+        setTabKey,
+        formPath,
+        userData,
+        signup,
+        login,
       };
     }, [
-      startLoggingInSpinner,
-      stopLoggingInSpinner,
-      sessionStorageNames,
-      switchToErrorScreen,
-      userEntryForm,
-      resetFormPath,
-      swapToButton,
-      swapToError,
-      loggingIn,
       formPath,
       userData,
+      loggingIn,
+      swapToError,
+      swapToButton,
+      userEntryForm,
+      resetFormPath,
+      sessionStorageNames,
+      switchToErrorScreen,
+      stopLoggingInSpinner,
+      startLoggingInSpinner,
     ]),
     handlers = useMemo(() => {
       return {
@@ -661,7 +660,6 @@ const App = () => {
       <Suspense fallback={<></>}>
         <Page
           {...handlers}
-          historyLengthRef={historyLengthRef}
           setSettings={setSettings as Dispatch<SetStateAction<Settings>>}
           setRejectedDonationReasons={setRejectedDonationReasons}
           setShowRefreshAppSpinner={setShowRefreshAppSpinner}
@@ -679,6 +677,7 @@ const App = () => {
           userFormValidated={userFormValidated}
           accountActivated={accountActivated}
           badResetRedirect={badResetRedirect}
+          historyLengthRef={historyLengthRef}
           paymentProcessed={paymentProcessed}
           setDonationLimit={setDonationLimit}
           refreshAppState={refreshAppState}
@@ -739,3 +738,4 @@ const App = () => {
 };
 
 export default App;
+// Le pouvoir arrête le pouvoir.

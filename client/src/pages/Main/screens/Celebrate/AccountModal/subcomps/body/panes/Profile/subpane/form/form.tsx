@@ -11,13 +11,13 @@ import React, {
 } from 'react';
 import { FormTippedField } from '.';
 import { international } from './fn';
-import { handleKeyDown } from '@Utils';
 import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
 import Form from 'react-bootstrap/esm/Form';
 import { STATES, COUNTRIES } from '@Tuples';
 import { Selector } from '@Components/forms';
 import { FieldControl, Props } from '@Types';
+import { handleKeyDown, simulateMouseClick } from '@Utils';
 import ToggleButton from 'react-bootstrap/esm/ToggleButton';
 import { ValidatingFields, ContactInfo } from '@Interfaces';
 import ToggleButtonGroup from 'react-bootstrap/esm/ToggleButtonGroup';
@@ -119,15 +119,6 @@ const ProfileForm = ({
     [isEmployed]
   );
 
-  const handleToggleBtnCursor = useCallback(
-    (idx: number) => {
-      if (Number(isEmployed) === idx) {
-        return 'default';
-      } else return 'pointer';
-    },
-    [isEmployed]
-  );
-
   const provideFormComponents = useCallback(
     (field: FieldControl) => {
       function inputElement(field: FieldControl) {
@@ -159,6 +150,7 @@ const ProfileForm = ({
         email: inputElement(field),
         number: inputElement(field),
         radio: (
+          // not using component SwitchButtons due to logical complexity
           <ToggleButtonGroup
             {...field}
             size={'lg'}
@@ -175,18 +167,14 @@ const ProfileForm = ({
                 onChange={handleChange}
                 id={`employed-choice-${radio}`}
                 key={`employed-choice-${radio}`}
-                style={{ cursor: handleToggleBtnCursor(i) }}
-                onKeyDown={(e) =>
-                  handleKeyDown(
-                    e,
-                    (
-                      handleChange as (
-                        e: ChangeEvent
-                      ) => (() => void) | undefined
-                    )(e as unknown as ChangeEvent),
-                    e
-                  )
-                }>
+                onKeyDown={(e) => {
+                  if (!!isEmployed)
+                    handleKeyDown(
+                      e,
+                      simulateMouseClick as unknown as () => void,
+                      e.target
+                    );
+                }}>
                 {radio}
               </ToggleButton>
             ))}
@@ -211,7 +199,6 @@ const ProfileForm = ({
     },
     [
       handleHideUnemployment,
-      handleToggleBtnCursor,
       isInternational,
       handleChange,
       contactInfo,

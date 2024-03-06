@@ -28,6 +28,7 @@ const PolCombobox = ({
   searchPolsByName,
   setShowClearBtn,
   optionCategory,
+  showCosponsors,
   setInputItems,
   itemToString,
   showClearBtn,
@@ -212,7 +213,7 @@ const PolCombobox = ({
             <FormCheckLabel
               title={COSPONSORS}
               htmlFor={'showcosponsors-lg'}>
-              &nbsp;Cosponsors Only
+              &nbsp;{showCosponsors ? 'Cosponsors Only' : 'House Members'}
             </FormCheckLabel>
           </InputGroupText>
         )}

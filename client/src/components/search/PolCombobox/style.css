@@ -22,6 +22,14 @@
 }
 .dropdown-combobox .checkbox-label {
   font-size: 0.75rem;
+  min-width: 144px;
+  width: 7.5vw;
+}
+.dropdown-combobox .checkbox-label:hover {
+  filter: brightness(110%);
+}
+#show-cosponsors-lg {
+  cursor: pointer;
 }
 .pol-search-label {
   color: #e0b8cc !important;
@@ -91,7 +99,7 @@ input[type='search']::-webkit-search-cancel-button {
   .dropdown-combobox
     span.checkbox-label.input-group-text
     .form-check-label {
-    margin-bottom: -1px;
+    margin-bottom: -2px;
   }
   input[type='search']::-webkit-search-cancel-button {
     margin-right: -0.7vw;

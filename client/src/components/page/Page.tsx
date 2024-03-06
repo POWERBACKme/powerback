@@ -116,6 +116,7 @@ const Page = ({
                 handleUserFormChange as (e: ChangeEvent) => void
               }
               showErr={showAlert ? showAlert.err : false}
+              badResetRedirect={badResetRedirect}
               setLinkIsExpired={setLinkIsExpired}
               uFeedback={secureUserPassFeedback}
               isMobile={isMobile}

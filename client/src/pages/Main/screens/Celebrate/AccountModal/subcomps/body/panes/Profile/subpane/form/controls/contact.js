@@ -31,7 +31,7 @@ module.exports = {
       feedback: 'Please enter a valid email address.',
       pattern: '^[\\w\\.]+@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}$',
       formtext:
-        'Donation receipts and other communication will be sent here. This can be different from your username.',
+        'Donation receipts and other notices will be sent here. This can be different from your username.',
       required: false,
     },
   ],
