@@ -122,8 +122,6 @@ const PaymentForm = ({
     }, []),
     handleSubmit = useCallback(
       (e: any) => {
-        e.preventDefault();
-        e.stopPropagation();
         const handler = async () => {
           if (error) {
             setShowTooltip((s) => !s);
@@ -159,7 +157,9 @@ const PaymentForm = ({
           )}
         </Overlay>
       )}
-      <div id='stripe-checkout'>
+      <div
+        id='stripe-checkout'
+        className={processing ? 'preserve-bg' : ''}>
         <div hidden={processing as boolean}>
           <CardElement
             onChange={
